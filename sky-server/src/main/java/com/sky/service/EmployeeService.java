@@ -34,4 +34,11 @@ public interface EmployeeService {
      * @param id
      */
     void update(Integer status, long id);
+
+    /**
+     * 获取员工信息
+     * @param id
+     * @return
+     */
+    Employee getById(Long id);
 }
