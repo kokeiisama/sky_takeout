@@ -134,4 +134,16 @@ public class EmployeeController {
         return Result.success(employee);
     }
 
+    /**
+     * 更新员工信息
+     * @param employeeDTO
+     * @return
+     */
+    @PutMapping
+    public Result updateById(@RequestBody EmployeeDTO employeeDTO){
+        log.info("更新员工信息{}", employeeDTO);
+        employeeService.updateById(employeeDTO);
+        return Result.success();
+    }
+
 }
