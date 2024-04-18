@@ -17,7 +17,7 @@ public class OssConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public AliOssUtil aliOssUtil(AliOssProperties aliOssProperties){
-
+        log.info("阿里云工具类:{}", aliOssProperties);
         String endpoint = aliOssProperties.getEndpoint();
         String accessKeyId = aliOssProperties.getAccessKeyId();
         String accessKeySecret = aliOssProperties.getAccessKeySecret();
